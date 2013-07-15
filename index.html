@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			this is a document
+		</title>
+		<link rel="stylesheet" href="style.css" />
+		<style type="text/css">
+			.border-blue {
+				border : 1px dotted #0000ff;
+			}
+			.border-black {
+				border : 1px dotted #000000;
+			}
+		</style>	
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			
+			var funcx = function() {
+				alert('document loaded');
+			};
+
+			$(document).ready(funcx);
+			
+			$(document).ready(function() {
+				$('#div-click-me').click(function() {
+					var elem = $('#my-first-div');
+					elem.removeClass('border-red');
+					elem.addClass('border-black');
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="my-first-div" class="border-red px50">div content</div>
+		<div id="div-click-me" class="border-blue px50">click me</div>
+		<div id="my-second-div" class="border-black" style="width:50px; min-height:50px;">other content</div>
+	</body>
+</html>
+
